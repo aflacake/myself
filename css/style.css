@@ -1,0 +1,333 @@
+/* style.css */
+
+/* SCRAPBOOK AMBIENCE — hidden by default (HP) */
+.scrapbook {
+  display: none;
+}
+
+.page {
+  padding: 24px 16px;
+  background-color: #fffdfc;
+
+  /* garis buku tulis */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(75, 59, 64, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 100% 28px; /* jarak antar garis */
+  border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+  margin-bottom: 32px;
+}
+
+.hero-stack {
+  position: relative;
+  text-align: center;
+}
+
+.hero-cover {
+  width: 100%;
+}
+
+.hero-core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.logo {
+  width: 300px;
+  margin-bottom: 8px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.tagline {
+  font-size: 13px;
+  margin: 6px 0 16px;
+}
+
+/* ACTIONS */
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BUTTON EFFECT — PRESS FEEL */
+
+.actions a {
+  display: inline-block;
+}
+
+.actions img {
+  width: 180px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+/* hover — sedikit mengecil */
+.actions a:hover img {
+  transform: scale(0.96);
+}
+
+/* active / click — terasa ditekan */
+.actions a:active img {
+  transform: scale(0.92);
+  filter: brightness(0.95);
+}
+
+.actions img {
+  width: 180px;
+}
+
+/* NOTES / QUOTES */
+.note {
+  font-style: italic;
+  opacity: 0.8;
+  margin: 24px 0;
+}
+
+.note.with-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.note.with-ribbon .note-icon {
+  width: 32px;
+  height: auto;
+}
+
+.note.with-heads {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.note.with-heads .note-head {
+  width: 28px;
+  height: auto;
+}
+
+.note.left { text-align: left; }
+.note.right { text-align: right; }
+.note.center { text-align: center; }
+
+/* DIVIDER */
+.divider {
+  position: relative;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.divider img {
+  width: 100%;
+  display: block;
+}
+
+/* overlay di atas gambar */
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.divider-text {
+  background: rgba(255,255,255,0.75);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.divider-text h2 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.divider-text p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* TEASER */
+.teaser-visual {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.teaser-visual img {
+  width: 85%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* VISUAL */
+.visual {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.visual img {
+  width: 55%;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+/* =========================
+   DESKTOP / PC VERSION
+========================= */
+@media (min-width: 1024px) {
+
+  .scrapbook {
+    display: block;
+    position: fixed;
+    top: 120px;
+    z-index: 1;
+    pointer-events: none; /* tidak ganggu klik */
+    opacity: 0.95;
+  }
+
+  .scrapbook img {
+    width: 320px;
+    max-width: none;
+    filter: drop-shadow(0 6px 12px rgba(75,59,64,0.25));
+  }
+
+  /* kiri */
+  .scrapbook-left {
+    left: -120px; /* TERPOTONG */
+    transform: rotate(-4deg);
+  }
+
+  /* kanan */
+  .scrapbook-right {
+    right: -120px; /* TERPOTONG */
+    transform: rotate(4deg);
+  }
+  
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+	background-size: 100% 32px;
+    box-shadow: 0 8px 24px rgba(75, 59, 64, 0.08);
+  }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 64px;
+  }
+
+  .hero-core {
+    padding: 32px;
+  }
+
+  .logo {
+    width: 360px;
+    margin-bottom: 12px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .actions img {
+    width: 200px;
+  }
+
+  /* NOTES */
+  .note {
+    margin: 32px 0;
+  }
+
+  /* DIVIDER */
+  .divider {
+    position: relative;
+    padding: 40px 0;
+  }
+
+  .divider img {
+    width: 100%;
+  }
+
+  /* container dua kolom */
+  .divider-overlay {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 48px;
+  }
+
+  .divider-text {
+    width: 38%;
+    padding: 16px 18px;
+  }
+
+  .divider-text h2 {
+    font-size: 15px;
+  }
+
+  .divider-text p {
+    font-size: 13px;
+  }
+  
+  /* TEASER VISUAL */
+  .teaser-visual {
+    margin: 48px 0;
+  }
+
+  .teaser-visual img {
+    width: 60%;
+    max-width: 420px;
+  }
+
+  /* TEASER TEXT */
+  .teaser {
+    max-width: 600px;
+    margin: 0 auto 64px;
+    text-align: center;
+  }
+
+  .teaser h2 {
+    font-size: 36px;
+  }
+
+  .teaser p {
+    font-size: 15px;
+  }
+
+  /* VISUAL CHARACTER */
+  .visual {
+    margin: 64px 0;
+  }
+
+  .visual img {
+    width: 40%;
+    max-width: 320px;
+  }
+
+}
