@@ -1,0 +1,129 @@
+/* css/traditional.css */
+
+.page {
+  padding: 24px 16px;
+  background-color: #fffdfc;
+
+  /* garis buku tulis */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(75, 59, 64, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 100% 28px; /* jarak antar garis */
+}
+
+/* PLAY TRADITIONAL */
+
+.with-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.with-ribbon .note-icon {
+  width: 32px;
+  height: auto;
+}
+
+.play-tradi-hero {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.play-tradi-hero .subtitle {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* HOW TO PLAY */
+
+.how-to-play {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 16px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+}
+
+.step {
+  background: rgba(255,255,255,0.8);
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+
+.how-note {
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* CATALOG */
+
+.catalog {
+  text-align: center;
+  margin: 48px 0;
+}
+
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.catalog-item img {
+  width: 70%;
+  max-width: 260px;
+  margin: 0 auto 12px;
+}
+
+.catalog-item h3 {
+  font-size: 18px;
+}
+
+.price {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.catalog-note {
+  margin-top: 24px;
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* =========================
+   DESKTOP / PC VERSION
+========================= */
+@media (min-width: 1024px) {
+
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+	background-size: 100% 32px;
+    box-shadow: 0 8px 24px rgba(75, 59, 64, 0.08);
+  }
+  
+  .catalog-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .catalog-item {
+    width: 30%;
+  }
+}

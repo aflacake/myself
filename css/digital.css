@@ -1,0 +1,130 @@
+/* css/digital.css */
+
+.page {
+  padding: 24px 16px;
+  background-color: #fffdfc;
+
+  /* garis buku tulis */
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(75, 59, 64, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 100% 28px; /* jarak antar garis */
+}
+
+/* PLAY DIGITAL */
+
+.play-digital .hero.small {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.hero-icon {
+  width: 64px;
+  margin-bottom: 8px;
+}
+
+.with-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.with-ribbon .note-icon {
+  width: 32px;
+  height: auto;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.content-block {
+  padding: 20px 16px;
+}
+
+.content-block h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.emphasis {
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  max-height: 240px;      /* batas tinggi di HP */
+  object-fit: contain;   /* SELURUH gambar terlihat */
+  background: #f4f4f4;   /* area kosong tetap rapi */
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.download-block {
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #A8DADC;
+  color: #4B3B40;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.download-note {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.tech-info ul {
+  padding-left: 18px;
+  font-size: 12px;
+}
+
+.note-small {
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* PC RESPONSIVE */
+@media (min-width: 1024px) {
+	
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+	background-size: 100% 32px;
+    box-shadow: 0 8px 24px rgba(75, 59, 64, 0.08);
+  }
+  
+  .screenshot-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .screenshot-grid img {
+    max-height: 320px;
+  }
+
+  .content-block {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}

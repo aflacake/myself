@@ -10,6 +10,36 @@
 </head>
 
 <body>
+	<header class="site-header">
+		<nav class="navbar">
+
+			<div class="nav-left">
+				<a href="index.html" class="brand">
+					<img src="assets/icon/logo.png" alt="MYSELF Logo">
+				</a>
+			</div>
+
+			<button class="nav-toggle" aria-label="Toggle navigation">
+				☰
+			</button>
+
+			<ul class="nav-menu">
+				<li class="has-sub">
+					<a href="play/index.html">Play</a>
+					<ul class="sub-menu">
+					<li><a href="play/traditional.html">Play Traditional</a></li>
+					<li><a href="play/digital.html">Play Digital</a></li>
+					</ul>
+				</li>
+
+				<li><a href="gallery/index.html">Gallery</a></li>
+				<li><a href="about/index.html">About</a></li>
+				<li><a href="license/index.html">Credits/Legal</a></li>
+				<li><a href="update/index.html">Updates</a></li>
+			</ul>
+		</nav>
+	</header>
+
 	<!-- SCRAPBOOK AMBIENCE (PC ONLY) -->
 	<div class="scrapbook scrapbook-left">
 		<img src="assets/character/pose-girl.png" alt="">
@@ -32,10 +62,10 @@
 			<p class="tagline">Quiet play, personal form.</p>
 
 		<div class="actions">
-				<a href="play/index.html">
+				<a href="play/traditional.html">
 				<img src="assets/add/btn-tradi.png" alt="Play Traditional">
 				</a>
-				<a href="play/index.html#digital">
+				<a href="play/digital.html">
 				<img src="assets/add/btn-digi.png" alt="Play Digital">
 				</a>
 			</div>
@@ -113,5 +143,6 @@
     <p>© MYSELF — Created by Nazwa Shabrina Zain</p>
   </footer>
 
+  <script src="js/nav.js"></script>
 </body>
 </html>
